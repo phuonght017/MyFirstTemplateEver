@@ -1,0 +1,14 @@
+<%- include('partials/head.ejs'); %>
+<body>
+    <%- include('partials/navbar.ejs'); %>
+    <h1>All The Cats:</h1>
+    <p><%= cats %></p>
+
+    <h1>Using loop</h1>
+    <ul>
+    <% for (let cat of cats) { %>
+        <li><%= cat %></li>
+    <% } %> 
+    </ul>
+</body>
+</html>

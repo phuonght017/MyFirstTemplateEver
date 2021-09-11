@@ -1,0 +1,25 @@
+<%- include('partials/head.ejs'); %>
+
+<body>
+  <%- include('partials/navbar.ejs'); %>
+  <h1>Descrip:</h1>
+  <p>
+    <%= description %>
+  </p>
+  <h4>Subcribe: <%= subscribers %>
+  </h4>
+  <ul>
+    <% for (let post of posts) { %>
+      <li>
+        <% if (post.img) { %>
+          <img src="<%= post.img %>" alt="img <%= name %>" <% } %>
+          <p>
+            <%= post.title %>
+              <p>
+                <i>-- <%= post.author %> --</i>
+      </li>
+      <% } %>
+  </ul>
+</body>
+
+</html>
